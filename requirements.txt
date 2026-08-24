@@ -15,5 +15,10 @@ segno
 pillow
 
 streamlit 
-
+librosa
+scipy
+soundfile
+torch
+resemblyzer
+webrtcvad-wheels
     
