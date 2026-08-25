@@ -26,7 +26,7 @@ def identify_speaker(new_embedding, candidates_dict, threshold=0.65):
     best_id= None
     best_score=-1.0
 
-    for sid, stored_embedding in candidates_dict:
+    for sid, stored_embedding in candidates_dict.items():
         if stored_embedding:
             similarity=np.dot(stored_embedding, new_embedding)
             if similarity>=best_score:

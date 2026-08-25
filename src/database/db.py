@@ -80,3 +80,7 @@ def create_attendance(logs):
 def get_attendance_for_teacher(teacher_id):
     response=supabase.table("attendance_logs").select("*,subjects!inner(*)").eq("subjects.teacher_id",teacher_id).execute()
     return response.data
+
+def update_student_voice_embedding(student_id,voice_embedding):
+    response=supabase.table("students").update({"voice_embedding":voice_embedding}).eq("student_id",student_id).execute()
+    return response.data
